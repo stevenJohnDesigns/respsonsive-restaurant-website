@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+}
+.page-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    gap: 100px;
+}
+
+/** font sizes and colors **/
+.hero-title,
+.about-subtitle,
+.services-subtitle,
+.app-subtitle,
+.contact-subtitle,
+.menu-subtitle {
+    font-size: 3.2rem;
+}
+.hero-subtitle,
+.about-title,
+.services-title,
+.card-title,
+.app-title,
+.contact-title,
+.footer-title,
+.menu-title {
+    font-size: 1.6rem;
+}
+.menu-card-title {
+    font-size: 1.3rem;
+}
+.view-menu-btn,
+.about-us-btn,
+.contact-btn {
+    font-size: 1.1rem;
+    color: #fff;
+}
+.card-text,
+.app-text,
+.contact-text,
+.footer-link,
+.menu-card-price,
+.about-text {
+    font-size: 1.1rem;
+    color: #000;
+}
+.app-text,
+.contact-text {
+    padding-top: 15px;
+}
+.logo {
+    color: #000;
+    font-size: 25px;
+}
+
+/** buttons **/
+.view-menu-btn,
+.about-us-btn,
+.contact-btn {
+    width: 100px;
+    padding: 7px 0;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.app-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 25px;
+}
+.app-store-btn {
+    width: 100%;
+    max-width: 145px;
+}
+
+/** header **/
+.header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 25px;
+    width: 100%;
+}
+.logo {
+    text-decoration: none;
+}
+
+/** hero, about, services, menu, app, form, footer  **/
+.hero,
+.about,
+.services,
+.app,
+.contact,
+.menu,
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.hero-top-left,
+.about-top-left,
+.services-top,
+.services-bottom,
+.app-top-left,
+.contact-top-left,
+.menu-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;
+}
+.services-bottom {
+    gap: 75px;
+}
+.svg-icons {
+    width: 65px;
+    height: 65px;
+}
+.hero-img {
+    max-width: 550px;
+}
+.about-img,
+.app-img {
+    max-width: 350px;
+}
+.hero-bottom-right,
+.about-bottom-right,
+.app-bottom-right {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    align-items: center;
+}
+.contact-form,
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 50px;
+}
+.social-icons {
+    padding-top: 10px;
+    display: flex;
+    width: max-content;
+    gap: 15px;
+}
+.footer-title,
+.menu-card-subtitle {
+    padding-bottom: 5px;
+}
+.footer {
+    gap: 35px;
+}
+.form-inputs {
+    width: 100%;
+    max-width: 250px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4,
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.menu-card {
+    border: 1px solid #c7c7c7;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 275px;
+    margin: auto;
+    box-shadow: 3px 5px #c7c7c7;
+}
+.menu-dish {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/** page animations **/
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-content {
+        gap: 200px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .hero,
+    .about,
+    .services-bottom,
+    .menu-bottom,
+    .app,
+    .contact,
+    .footer {
+        flex-direction: row;
+    }
+    .hero {
+        height: calc(100vh - 100px);
+        align-items: center;
+    }
+    .hero,
+    .about,
+    .app,
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-bottom-right,
+    .app-bottom-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .footer {
+        justify-content: space-between;
+    }
+    .contact-form {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    .app-top-left,
+    .contact-form,
+    .contact-top-left,
+    .about-top-left,
+    .hero-top-left,
+    .services-top,
+    .menu-top {
+        padding-top: 0;
+    }
+    .contact-bottom-right {
+        width: 100%;
+        margin: auto;
+    }
+    .form-inputs {
+        max-width: 315px;
+    }
+}
